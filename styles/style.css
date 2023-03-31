@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+
+/*- --- GENERALIDADES --- -*/
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+/*- --- UTILIDADES --- -*/
+.container{
+    width: 95vw;
+    max-width: 1300px;
+    
+    margin: 0 auto;
+}
+
+.btn1{
+    min-width: 130px;
+    padding: 10px 10px;
+    
+    color: var(--secundary-color);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #00000063;
+    background: #fff;
+
+    transition: transform 0.2s;
+    transition: background 0.3s;
+    display: inline-block;
+}
+.btn1:hover{
+    background: var(--primary-color);
+    transform: translate(3px, 3px);
+}
+
+.btn2{
+    min-width: 130px;
+    padding: 10px 10px;
+    
+    color: var(--secundary-color);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #00000063;
+    background: var(--primary-color);
+
+    transition: transform 0.2s;
+    transition: background 0.3s;
+    display: inline-block;
+}
+.btn2:hover{
+    background: #fff;
+    transform: translate(3px, 3px);
+}
+
+
+
+/*- --- ON PAGE --- -*/
+/*-- NAV BAR --*/
+header{
+    width: 100%;
+    position: absolute;
+    
+    padding: 20px 0;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a{
+    padding: 7px;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 15px;
+    background: #00000015;
+
+    transition: all 0.2s;
+}
+
+nav a:hover{
+    background: #fff;
+    color: var(--secundary-color);
+}
+
+nav a:hover path{
+    fill: var(--secundary-color);
+}
+
+.logo{
+    width: 30px;
+}
+
+
+
+/*-- INDEX --*/
+.songs{
+    min-height: calc(100dvh - 50px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.song{
+    padding: 50px;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song1{
+    color: #0442BF;
+    background: #7f9fbe;
+    background: linear-gradient(180deg, #7f9fbe 30%, #2c96b6 100%);
+}
+.song1 .btn1{
+    background: #0442BF;
+    color: #7f9fbe;
+}
+
+.song2{
+    color: #A3A660;
+    background: #2b2b2b;
+    background: linear-gradient(180deg, #2b2b2b 30%, #4d4e35 100%);
+}
+.song2 .btn1{
+    background: #A3A660;
+    color: #2b2b2b;
+}
+
+.song3{
+    color: #8C1C45;
+    background: #ADBCD9;
+    background: linear-gradient(180deg, #ADBCD9 30%, #565caf 100%);
+}
+.song3 .btn1{
+    background: #8C1C45;
+    color: #7f9fbe;
+}
+
+.song4{
+    color: #BF1F3C;
+    background: #c9b188;
+    background: linear-gradient(180deg, #c9b188 30%, #c78445 100%);
+}
+.song4 .btn1{
+    background: #BF1F3C;
+    color: #c9b188;
+}
+
+.song img{
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #00000063;
+}
+
+.song h2{
+    min-height: 70px;
+}
+
+@media (max-width: 1000px) {
+    .songs{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .songs{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*-- FOOTER --*/
+footer{
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+/*-- ALBUM --*/
+.album{
+    min-height: 100dvh;
+    background: var(--bg-color);
+    padding: 40px 0 20px;
+}
+
+.album .container{
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+@media (max-width: 760px) {
+    .album .container{
+        padding-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.album_cover img{
+    max-width: 600px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px #00000063;
+}
+.album_links{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.album_text{
+    color: var(--primary-color);
+    font-size: 20px;
+    text-align: center;
+
+    flex-basis: 50%;
+}
+
+.album_text blockquote{
+    font-style: italic;
+}
+
+.album_tittle{
+    line-height: 1;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.album_artist{
+    font-weight: 300;
+    font-style: italic;
+}
